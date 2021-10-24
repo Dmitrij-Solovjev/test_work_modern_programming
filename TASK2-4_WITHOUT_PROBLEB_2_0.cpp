@@ -8,7 +8,7 @@
 
 #define NUM 12
 #define NUM_FOR_THREAD 10
-#define WITH_LOG true
+#define WITH_LOG false
 
 using namespace std;
 
@@ -32,7 +32,6 @@ public:
     }
 
     virtual void about_me() {
-        cout << "------------------------------------" << endl;
         cout << "I have _date: " + to_string(get_date()) << endl;
         cout << "       _num_of_page: " + to_string(get_num_of_page()) << endl;
         cout << "------------------------------------" << endl;
@@ -54,7 +53,6 @@ public:
     }
 
     void about_me() override {
-        cout << "------------------------------------" << endl;
         cout << "I have _date: " + to_string(get_date()) << endl;
         cout << "       _num_of_page: " + to_string(get_num_of_page()) << endl;
         //book::about_me();
@@ -144,6 +142,8 @@ int main() {
     for (int i = 0; i < NUM * 2; i++) {
         delete shell[0];
         shell.erase(shell.begin(), shell.begin() + 1);
+        cout << "------------------------------------" << endl;
+
     }
 
     cout << "SUCCESS!";
