@@ -6,7 +6,7 @@
 #include <atomic>
 #include <mutex>
 
-#define NUM 12
+#define NUM 11
 #define NUM_FOR_THREAD 10
 #define WITH_LOG false
 
